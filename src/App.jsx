@@ -4,6 +4,7 @@ import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import Faq from "./pages/Faq";
 import AppLayout from "./components/AppLayout";
+import Services from "./pages/Services";
 
 const App = () => {
 
@@ -15,6 +16,10 @@ const App = () => {
         {
           path: "/",
           element: <Home />
+        },
+        {
+          path: "/services",
+          element: <Services />
         },
         {
           path: "/projects",

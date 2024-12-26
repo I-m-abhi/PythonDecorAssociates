@@ -20,6 +20,89 @@ import blogImg3 from './assets/Blogs/pic3.jpg';
 import blogImg4 from './assets/Blogs/pic4.jpg';
 import blogImg5 from './assets/Blogs/pic5.jpg';
 
+// MainSlider
+import kitchen from './assets/slider/1.png';
+import professionals from './assets/slider/2.png';
+import flooring from './assets/slider/3.png';
+export const mainSlider = [
+  {
+    name: 'MODISH',
+    heading: 'Highest Quality  Kitchen Solutions',
+    des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum! hi am abhisjek kumaer and doinf right niw cofumf with hrhe heklp of vs code  extension ',
+    imgPath: kitchen,
+  },
+  {
+    name: 'RELIABLE',
+    heading: 'Professionals you can rely on',
+    des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum! hi am abhisjek kumaer and doinf right niw cofumf with hrhe heklp of vs code  extension ',
+    imgPath: professionals,
+  },
+  {
+    name: 'VARIETY',
+    heading: 'Flooring for Any Interior Site',
+    des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum! hi am abhisjek kumaer and doinf right niw cofumf with hrhe heklp of vs code  extension ',
+    imgPath: flooring,
+  },
+];
+
+// AboutSlider
+import aboutSlider1 from './assets/about_slider/1.jpg';
+import aboutSlider2 from './assets/about_slider/2.jpg';
+import aboutSlider3 from './assets/about_slider/3.jpg';
+import aboutSlider4 from './assets/about_slider/4.jpg';
+import aboutSlider5 from './assets/about_slider/5.jpg';
+export const aboutSlider = [
+  {
+    imgPath: aboutSlider1,
+  },
+  {
+    imgPath: aboutSlider2,
+  },
+  {
+    imgPath: aboutSlider3,
+  },
+  {
+    imgPath: aboutSlider4,
+  },
+  {
+    imgPath: aboutSlider5,
+  },
+];
+
+// Whyus
+import whyus1 from './assets/whyus/1.png';
+import whyus2 from './assets/whyus/2.png';
+import whyus3 from './assets/whyus/3.png';
+import whyus4 from './assets/whyus/4.png';
+import whyus5 from './assets/whyus/5.png';
+import whyus6 from './assets/whyus/6.png';
+export const whyUs = [
+  {
+    img: whyus1,
+    content: "Complete Transparency in Design and Costs – No Surprises, Only Perfection!",
+  },
+  {
+    img: whyus2,
+    content: "Your Vision, Our Craftsmanship – No Upfront Cost, Just Honest Design.",
+  },
+  {
+    img: whyus3,
+    content: "Designing Dreams Without Upfront Investment – Only Pay When You're Impressed!",
+  },
+  {
+    img: whyus4,
+    content: "No Upfront Payments, Only Inspired Interiors – Let's Build Your Space Together.",
+  },
+  {
+    img: whyus5,
+    content: "Quality Design, Transparent Process – Material Selection Made Easy and Honest.",
+  },
+  {
+    img: whyus6,
+    content: "Design First, Pay Later – Your Satisfaction Comes First!",
+  },
+];
+
 // ProjectsPage
 export const projectHeading = ['All', 'Kitchen', 'Living', 'Bedroom', 'Bathroom'];
 

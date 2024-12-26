@@ -1,11 +1,4 @@
-import { MdLocalPhone, MdMarkEmailUnread } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
-import { MdLocationPin } from "react-icons/md";
-import { LiaWhatsapp } from "react-icons/lia";
-import { GrFacebookOption } from "react-icons/gr";
-import { PiInstagramLogo } from "react-icons/pi";
-import { LiaLinkedinIn } from "react-icons/lia";
-import { PiPinterestLogo } from "react-icons/pi";
+import { MdMarkEmailUnread } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { IoLocation } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";

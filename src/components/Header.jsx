@@ -1,14 +1,11 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router';
 import logo from '../assets/logo.png';
 import GetInTouch from './GetInTouch';
-// import AnchorLink from "react-anchor-link-smooth-scroll";
-import { Link, useLocation } from 'react-router';
 
 const Header = () => {
   const [fixedHeader, setFixedHeader] = useState(false);
   const [getInTouch, setGetInTouch] = useState(false);
-  const currentRoute = useLocation().pathname.toLowerCase();
-  console.log(currentRoute.endsWith('/projects'))
 
   const fixedOnScroll = () => {
     if (window.scrollY >= 100) {
@@ -35,37 +32,11 @@ const Header = () => {
           </div>
           <nav className='navbar'>
             <ul>
-              <li>
-                <Link to='/'
-                  style={{ color: currentRoute.endsWith('/') ? "#48C989" : "" }}>Home</Link>
-              </li>
-              <li>
-                {/* <AnchorLink href="#about-section"> */}
-                  About us
-                {/* </AnchorLink> */}
-              </li>
-              <li>
-                {/* <AnchorLink href="#service-section"> */}
-                  Services
-                {/* </AnchorLink> */}
-              </li>
-              <li>
-                <Link to='/projects'
-                  style={{ color: currentRoute.endsWith('/projects') ? "#48C989" : "" }}>Projects</Link>
-              </li>
-              <li>
-                <Link to='/blogs'
-                  style={{ color: currentRoute.endsWith('/blogs') ? "#48C989" : "" }}>Blogs</Link>
-              </li>
-              <li>
-                <Link to='/faq'
-                  style={{ color: currentRoute.endsWith('/faq') ? "#48C989" : "" }}>FAQ</Link>
-              </li>
-              <li>
-                {/* <AnchorLink href="#footer-section"> */}
-                  Contact us
-                {/* </AnchorLink> */}
-              </li>
+              <li><NavLink to='/'>Home</NavLink></li>
+              <li><NavLink to='/services'>Services</NavLink></li>
+              <li><NavLink to='/projects'>Projects</NavLink></li>
+              <li><NavLink to='/blogs'>Blogs</NavLink></li>
+              <li><NavLink to='/faq'>FAQ</NavLink></li>
             </ul>
           </nav>
           <div className="connect">

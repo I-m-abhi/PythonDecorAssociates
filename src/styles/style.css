@@ -3,7 +3,7 @@
   box-shadow: var(--box-shadow);
 
   & .container {
-    max-width: 142rem;
+    max-width: 140rem;
     padding: .5rem 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@
 
 /* Header-Section--Start */
 .header-section .container {
-  max-width: 142rem;
+  max-width: 140rem;
   padding: 1.1rem 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -93,11 +93,9 @@
   box-shadow: var(--box-shadow);
 }
 
-/* Header-Section--End */
-
-/* Header-Section--End */
+/* GetInTouch-Section--Start */
 .getInTouch-section {
-  background-image: url('../Images/bg-map.png');
+  background-image: url('../assets/bg-map.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--body-bg-color);
@@ -181,8 +179,6 @@
   }
 }
 
-/* Header-Section--End */
-
 /* Hero-Section--Start */
 main .hero-section {
   height: 51.7rem;
@@ -244,6 +240,18 @@ main .hero-section {
   }
 }
 
+main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 142rem;
+  padding: 1.1rem 2.5rem;
+
+  & button {
+    margin-left: .4rem;
+  }
+}
+
 @keyframes animate {
   0% {
     background-color: white;
@@ -252,28 +260,6 @@ main .hero-section {
 
   100% {
     transform: translateY(0);
-  }
-}
-
-.media-section {
-  box-shadow: var(--box-shadow);
-
-  & .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 142rem;
-    padding: 1.1rem 2.5rem;
-
-    & ul {
-      display: flex;
-      align-items: center;
-      gap: 1.4rem;
-    }
-
-    & button {
-      margin-left: .4rem;
-    }
   }
 }
 
@@ -301,6 +287,7 @@ main .hero-section {
     color: var(--theme-color);
     margin-bottom: 2rem;
   }
+
   & p {
     padding: 1rem 0;
     width: 90%;
@@ -345,15 +332,18 @@ main .hero-section {
   & .content {
     padding: 2rem;
   }
+
   & .img-box {
     width: 100%;
     height: 50%;
     margin-bottom: 1.2rem;
+
     & img {
       width: 100%;
     }
   }
 }
+
 /* WhyUs-Section--End */
 
 
@@ -437,23 +427,23 @@ main .hero-section {
 /* Service-Section--Start */
 #service-section .container .grid {
   gap: 1rem;
-  
+
   & .item {
     position: relative;
     transition: all .5s linear;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+
     & .img-box {
       position: relative;
-      
+
       & img {
         width: 100%;
         height: 250px;
         border-radius: 1rem;
       }
-      
+
       & h3 {
         position: absolute;
         top: 50%;
@@ -464,12 +454,12 @@ main .hero-section {
         font-size: 1.5rem;
       }
     }
-    
-    
+
+
     & .content-text {
       padding: 2.4rem 1.4rem;
       margin-bottom: 6.4rem;
-      
+
       & h4 {
         font-weight: 600;
         font-size: 1.5rem;
@@ -477,7 +467,7 @@ main .hero-section {
         opacity: .7;
       }
     }
-    
+
     & button {
       position: absolute;
       bottom: 0;
@@ -547,14 +537,7 @@ main .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  & .foot-media ul {
-    display: flex;
-    gap: 2.4rem;
-  }
 }
-
-/* Footer-Section--End */
 
 /* Project-Section--Start */
 .project-page .container .project-heading {
@@ -625,25 +608,25 @@ main .hero-section {
 
 .project-section .container .grid {
   gap: 1rem;
-  
+
   & .item {
     transition: all .5s linear;
     padding: 2rem;
     background-color: white;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+
     & .img-box {
-      
+
       & img {
         width: 100%;
         height: 250px;
         border-radius: 1rem;
       }
-      
+
     }
-    
-    
+
+
     & .content-text {
       padding: 2.4rem 1.4rem 0 1.4rem;
 
@@ -652,20 +635,21 @@ main .hero-section {
         opacity: .7;
         color: var(--theme-color);
       }
-      
+
       & h4 {
         font-size: 1.4rem;
         margin: 1.4rem 0;
         opacity: .7;
       }
     }
-    
+
     & button {
       margin-top: 2.4rem;
     }
   }
 
 }
+
 /* FAQ-Page--Start */
 .faq-page .faq-section {
   display: flex;
@@ -720,6 +704,7 @@ main .hero-section {
     transform: translateY(0);
   }
 }
+
 /* FAQ-Page--End */
 
 /* Blog-Page--Start */
@@ -749,6 +734,7 @@ main .hero-section {
       transform: rotate(40deg);
       z-index: 1;
     }
+
     &:hover::before {
       left: 115%;
       top: 90%;
@@ -788,4 +774,5 @@ main .hero-section {
     }
   }
 }
+
 /* Blog-Page--End */

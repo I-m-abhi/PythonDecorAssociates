@@ -1,31 +1,10 @@
 import { useState } from 'react';
-import img1 from '../assets/about_slider/1.jpg';
-import img2 from '../assets/about_slider/2.jpg';
-import img3 from '../assets/about_slider/3.jpg';
-import img4 from '../assets/about_slider/4.jpg';
-import img5 from '../assets/about_slider/5.jpg';
 import SectionHead from './SectionHead';
+import { aboutSlider } from '../constants';
 
 const About = () => {
-
-  const AboutSlider = [
-    {
-      imgPath: img1,
-    },
-    {
-      imgPath: img2,
-    },
-    {
-      imgPath: img3,
-    },
-    {
-      imgPath: img4,
-    },
-    {
-      imgPath: img5,
-    },
-  ]
   const [aboutSlideIndex, setAboutSlideIndex] = useState(0);
+  
   const preSlider = () => {
     if (aboutSlideIndex <= 0) {
       setAboutSlideIndex(4);
@@ -53,7 +32,7 @@ const About = () => {
           </div>
           <div className="right-content">
             <div className="img-box"
-              style={{ backgroundImage: 'url(' + AboutSlider[aboutSlideIndex].imgPath + ')' }}
+              style={{ backgroundImage: 'url(' + aboutSlider[aboutSlideIndex].imgPath + ')' }}
             >
               <button onClick={nextSlider}>&lt;</button>
               <button onClick={preSlider}>&gt;</button>

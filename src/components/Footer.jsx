@@ -1,12 +1,8 @@
-import { LiaWhatsapp } from "react-icons/lia";
-import { GrFacebookOption } from "react-icons/gr";
-import { PiInstagramLogo } from "react-icons/pi";
-import { LiaLinkedinIn } from "react-icons/lia";
-import { PiPinterestLogo } from "react-icons/pi";
 import { IoLocation } from "react-icons/io5";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { Link } from "react-router";
+import SocialMedia from "./SocialMedia";
 
 const Footer = () => {
   return (
@@ -22,9 +18,10 @@ const Footer = () => {
             <div>
               <ul>
                 <Link className='link' to='/'><li>Home</li></Link>
+                <Link className='link' to='/services'><li>Services</li></Link>
                 <Link className='link' to='/projects'><li>Projects</li></Link>
                 <Link className='link' to='/blogs'><li>Blogs</li></Link>
-                <li>Contact Us</li>
+                <Link className='link' to='/faq'><li>FAQ</li></Link>
               </ul>
             </div>
           </div>
@@ -52,18 +49,9 @@ const Footer = () => {
         </div>
         <div className="copyright-sec">
           <p>© 2022 Your Company. Designed By 7xtheme.</p>
-          <div className="foot-media">
-            <ul>
-              <li className="media-icons"> <LiaWhatsapp /> </li>
-              <li className="media-icons"> <GrFacebookOption /> </li>
-              <li className="media-icons"> <PiInstagramLogo /> </li>
-              <li className="media-icons"> <LiaLinkedinIn /> </li>
-              <li className="media-icons"> <PiPinterestLogo /> </li>
-            </ul>
-          </div>
+          <SocialMedia />
         </div>
       </div>
-
     </footer>
   )
 };
