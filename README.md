@@ -1,0 +1,1 @@
+# Setup project with vite + React 19
