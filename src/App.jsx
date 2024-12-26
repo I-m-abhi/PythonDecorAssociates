@@ -1,8 +1,39 @@
-const App = ()=> {
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Blog from "./pages/Blog";
+import Faq from "./pages/Faq";
+import AppLayout from "./components/AppLayout";
+
+const App = () => {
+
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "/projects",
+          element: <Projects />
+        },
+        {
+          path: "/blogs",
+          element: <Blog />
+        },
+        {
+          path: "/faq",
+          element: <Faq />
+        },
+      ]
+    },
+  ]);
+
   return (
-    <div className="app">
-      hello
-    </div>
+    <RouterProvider router={appRouter} />
   )
 };
 
