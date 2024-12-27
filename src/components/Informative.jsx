@@ -24,7 +24,7 @@ const Informative = () => {
   const countUpRef = useRef();
 
   return (
-    <div className="informative-section">
+    <div className="informative-section grid grid-two-cols">
       <div className="infographic">
         <SectionHead sectionHeading={'Infographic'} />
         <div className="section-content">

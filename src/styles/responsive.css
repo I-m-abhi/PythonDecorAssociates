@@ -1,0 +1,107 @@
+@media (max-width: 1400px) {
+  main .hero-section {
+    & .slide {
+      & .content {
+        & .heading {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 53.25%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: 110rem;
+  }
+  .grid-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-two-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-three-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .topbar-section {
+    & .container {
+      & p:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  .header-section .container {
+    max-width: 130rem;
+    padding: 1.1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    & .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+  
+      & .logo {
+        width: 17%;
+  
+        & img {
+          width: 100%;
+        }
+      }
+  
+      & h1 span {
+        color: var(--theme-color);
+      }
+    }
+  
+    & .navbar {
+      display: none;
+    }
+  }
+
+  main .hero-section {
+    & .slide {
+      & .content {
+        left: 5rem;
+        & .heading {
+          width: 90%;
+        }
+        & .des {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  #about-section .right-content {
+    & .img-box {
+      height: 40rem;
+      & button:nth-of-type(1) {
+        right: 55%;
+      }
+      & button:nth-of-type(2) {
+        right: 35%;
+      }
+    }
+  }
+
+  .whyus-section .container .section-content {
+    flex-wrap: wrap;
+    & .img-box {
+      & img {
+        width: 20%;
+      }
+    }
+  }
+}
