@@ -20,18 +20,45 @@
   .container {
     max-width: 110rem;
   }
+
   .grid-three-cols {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #footer-section .container .grid {
+    justify-items: start;
+
+    & .link-sec {
+      justify-self: end;
+    }
   }
 }
 
 @media (max-width: 700px) {
+  .mobile-navbar {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: black;
+    padding: 1.1rem 2.5rem;
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
   .grid-two-cols {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .grid-three-cols {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .topbar-section {
     & .container {
       & p:nth-of-type(2) {
@@ -46,25 +73,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
     & .header-brand {
       display: flex;
       align-items: center;
       gap: 1.4rem;
-  
+
       & .logo {
         width: 17%;
-  
+
         & img {
           width: 100%;
         }
       }
-  
+
       & h1 span {
         color: var(--theme-color);
       }
     }
-  
+
     & .navbar {
       display: none;
     }
@@ -74,9 +101,11 @@
     & .slide {
       & .content {
         left: 5rem;
+
         & .heading {
           width: 90%;
         }
+
         & .des {
           width: 90%;
         }
@@ -87,9 +116,11 @@
   #about-section .right-content {
     & .img-box {
       height: 40rem;
+
       & button:nth-of-type(1) {
         right: 55%;
       }
+
       & button:nth-of-type(2) {
         right: 35%;
       }
@@ -98,10 +129,32 @@
 
   .whyus-section .container .section-content {
     flex-wrap: wrap;
+
     & .img-box {
       & img {
         width: 20%;
       }
     }
+  }
+
+  #footer-section .container .grid {
+    & .link-sec {
+      justify-self: start;
+    }
+  }
+
+  #footer-section .copyright-sec {
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
+@media (max-width: 450px) {
+  main .container {
+    & .slider-btn{
+      flex-direction: column;
+    } 
   }
 }

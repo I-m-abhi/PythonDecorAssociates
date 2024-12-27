@@ -45,6 +45,16 @@ const Header = () => {
         </div>
       </header>
       <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
+
+      <nav className='mobile-navbar'>
+        <ul>
+          <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/services'>Services</NavLink></li>
+          <li><NavLink to='/projects'>Projects</NavLink></li>
+          <li><NavLink to='/blogs'>Blogs</NavLink></li>
+          <li><NavLink to='/faq'>FAQ</NavLink></li>
+        </ul>
+      </nav>
     </>
   )
 };

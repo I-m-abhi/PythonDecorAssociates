@@ -54,7 +54,7 @@ const MainSlider = () => {
       </div>
       <div className='container'>
         <SocialMedia />
-        <div>
+        <div className='slider-btn'>
           <button onClick={preMainSlider}>Pre.</button>
           <button onClick={nextMainSlider}>Next</button>
         </div>
