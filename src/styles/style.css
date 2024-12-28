@@ -1,6 +1,7 @@
 /* Topbar-Section--Start */
 .topbar-section {
   box-shadow: var(--box-shadow);
+  overflow: hidden;
 
   & .container {
     max-width: 130rem;
@@ -263,8 +264,6 @@ main .container {
   }
 }
 
-/* Hero-Section--End */
-
 /* About-Section--Start */
 #about-section {
   background-image: url('../assets/bg-4.png');
@@ -321,31 +320,20 @@ main .container {
   }
 }
 
-/* About-Section--End */
-
 /* WhyUs-Section--Start */
-.whyus-section .container .section-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 2.4rem;
-
+.whyus-section .container .grid {
   & .content {
     padding: 2rem;
   }
-
   & .img-box {
     width: 100%;
     height: 50%;
-    margin-bottom: 1.2rem;
     overflow: hidden;
-
     & img {
-      width: 100%;
+      width: 50%;
     }
   }
 }
-
-/* WhyUs-Section--End */
 
 
 /* Informative-Section--Start */
@@ -418,8 +406,6 @@ main .container {
   }
 }
 
-/* Informative-Section--End */
-
 /* Service-Section--Start */
 #service-section .container .grid {
   gap: 1rem;
@@ -472,8 +458,6 @@ main .container {
   }
 
 }
-
-/* Service-Section--End */
 
 /* Footer-Section--Start */
 #footer-section {
@@ -600,9 +584,6 @@ main .container {
 
 }
 
-
-/* Project-Section--End */
-
 .project-section .container .grid {
   gap: 1rem;
 
@@ -648,14 +629,11 @@ main .container {
 }
 
 /* FAQ-Page--Start */
-.faq-page .faq-section {
-  display: flex;
-  gap: 3.4rem;
+.faq-page .grid {
+  gap: 5rem;
 }
 
-.faq-page .faq-section .left-faq {
-  width: 50%;
-
+.faq-page .grid .left-faq {
   & .faq-item h3 {
     margin: 1.4rem 0;
     font-size: 1.6rem;
@@ -663,8 +641,7 @@ main .container {
   }
 }
 
-.faq-page .faq-section .right-faq {
-  width: 50%;
+.faq-page .grid .right-faq {
 
   & .faq-item span {
     display: inline-block;
@@ -702,19 +679,16 @@ main .container {
   }
 }
 
-/* FAQ-Page--End */
-
 /* Blog-Page--Start */
-.blog-page .container .blog-listing {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.blog-page .container .grid {
   gap: 2.4rem;
 }
 
-.blog-page .container .blog-listing .single-blog {
+.blog-page .container .grid .single-blog {
   & .blog-img {
     border: .1rem solid rgba(0, 0, 0, .1);
     padding: 2.4rem;
+    width: 100%;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -771,5 +745,3 @@ main .container {
     }
   }
 }
-
-/* Blog-Page--End */

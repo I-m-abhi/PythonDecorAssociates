@@ -49,7 +49,7 @@ const Faq = () => {
       />
       <div className="container">
         <SectionHead sectionHeading='FAQ' />
-        <div className="faq-section">
+        <div className="grid grid-two-cols">
           <div className='left-faq'>
             {faqData.map((item, id) =>
             ((id % 2 === 0) ?

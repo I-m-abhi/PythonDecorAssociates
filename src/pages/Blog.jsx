@@ -11,7 +11,7 @@ const Blog = () => {
         pageDes='The essence of interior design will always be about people and how they live. It is about the realities of what makes for an attractive, civilized.'
       />
       <div className="container">
-        <div className="blog-listing">
+        <div className="grid grid-three-cols">
           {blogDetails.map((item, id) =>
             <div key={id} className="single-blog">
               <div className='blog-img'>

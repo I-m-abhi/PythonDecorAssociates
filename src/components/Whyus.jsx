@@ -6,7 +6,7 @@ const Whyus = () => {
     <section className="whyus-section">
       <div className="container">
         <SectionHead sectionHeading={'Why us'} />
-        <div className="section-content">
+        <div className="grid grid-six-cols">
           {whyUs.map((elem, id) => {
             return (
               <div key={id} className="content">
