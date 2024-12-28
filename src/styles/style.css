@@ -120,6 +120,10 @@
     margin: 3rem 10rem 0 0;
     cursor: pointer;
   }
+
+  & .form-submit {
+    margin-top: 2rem;
+  }
 }
 
 .getInTouch-section .sec-content {

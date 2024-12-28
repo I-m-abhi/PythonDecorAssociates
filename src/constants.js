@@ -232,3 +232,56 @@ export const blogDetails = [
     year: '2024',
   },
 ];
+
+
+export const infographic = [
+  {
+    num: '05',
+    content: 'Years of Experience',
+  },
+  {
+    num: '08',
+    content: 'Project Taken',
+  },
+  {
+    num: '05',
+    content: 'Project Completed',
+  },
+  {
+    num: '03',
+    content: 'Ongoing Projects',
+  },
+];
+
+export const testimonialData = [
+  {
+    img: "https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg",
+    clientName: "Abhi",
+    role: "Client",
+    feedback: "lorem ipsum dollar sit amet",
+  },
+  {
+    img: "https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg",
+    clientName: "Michel John",
+    role: "Architect",
+    feedback: "lorem ipsum dollar sit amet",
+  },
+  {
+    img: "https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg",
+    clientName: "Abhi",
+    role: "Client",
+    feedback: "lorem ipsum dollar sit amet",
+  },
+  {
+    img: "https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg",
+    clientName: "Abhi",
+    role: "Client",
+    feedback: "lorem ipsum dollar sit amet",
+  },
+  {
+    img: "https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg",
+    clientName: "johnson",
+    role: "custumer",
+    feedback: "lorem ipsum dollar sit amet",
+  },
+]

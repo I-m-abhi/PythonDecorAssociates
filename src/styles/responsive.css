@@ -16,6 +16,24 @@
   }
 }
 
+@media(max-width: 950px) {
+  main .hero-section {
+    & .slide {
+      & .content {
+        left: 15rem;
+
+        & .heading {
+          width: 80%;
+        }
+
+        & .des {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1100px) {
   .container {
     max-width: 110rem;
@@ -31,6 +49,12 @@
 
   .blog-page .container .grid .single-blog .blog-img img {
     height: 35rem;
+  }
+
+  .informative-section .testimonial .section-content {
+    & .client-feedback {
+      width: 90%;
+    }
   }
 
   .whyus-section .container .grid {
@@ -51,26 +75,51 @@
 }
 
 @media (max-width: 850px) {
+  .grid-two-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .grid-six-cols {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .header-section .container {
     & .connect {
       margin-left: 5rem;
     }
   }
 
+  #about-section .right-content {
+    & .img-box {
+      height: 40rem;
+
+      & button:nth-of-type(1) {
+        right: 55%;
+      }
+
+      & button:nth-of-type(2) {
+        right: 35%;
+      }
+    }
+  }
+
   .page-header-section {
     & .container {
       padding-left: 8rem;
+
       & .heading {
         font-size: 40px;
         width: 100%;
       }
+
       & .des {
         width: 100%;
       }
     }
+  }
+
+  .project-page .container .project-heading {
+    width: 80%;
   }
 }
 
@@ -92,13 +141,10 @@
     }
   }
 
-  .grid-two-cols {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   .grid-three-cols {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .grid-six-cols {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -125,24 +171,6 @@
         & .heading {
           width: 90%;
         }
-
-        & .des {
-          width: 90%;
-        }
-      }
-    }
-  }
-
-  #about-section .right-content {
-    & .img-box {
-      height: 40rem;
-
-      & button:nth-of-type(1) {
-        right: 55%;
-      }
-
-      & button:nth-of-type(2) {
-        right: 35%;
       }
     }
   }
@@ -162,8 +190,12 @@
 
 @media (max-width: 450px) {
   main .container {
-    & .slider-btn{
+    & .slider-btn {
       flex-direction: column;
-    } 
+    }
+  }
+
+  .project-page .container .project-heading {
+    width: 100%;
   }
 }

@@ -1,26 +1,28 @@
-import { useRef } from 'react';
-// import CountUp from 'react-countup';
+import { useRef, useState } from 'react';
+import CountUp from 'react-countup';
 import SectionHead from './SectionHead';
+import { useSwipeable } from 'react-swipeable';
+import { infographic, testimonialData } from '../constants';
 
 const Informative = () => {
-  const infographic = [
-    {
-      num: '05',
-      content: 'Years of Experience',
+  const [feedbackIndex, setFeedbackIndex] = useState(1);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (feedbackIndex === testimonialData.length) {
+        setFeedbackIndex(1);
+      } else {
+        setFeedbackIndex(feedbackIndex + 1)
+      }
     },
-    {
-      num: '08',
-      content: 'Project Taken',
+    onSwipedRight: () => {
+      if (feedbackIndex === 1) {
+        setFeedbackIndex(testimonialData.length);
+      } else {
+        setFeedbackIndex(feedbackIndex - 1)
+      }
     },
-    {
-      num: '05',
-      content: 'Project Completed',
-    },
-    {
-      num: '03',
-      content: 'Ongoing Projects',
-    },
-  ];
+  });
+
   const countUpRef = useRef();
 
   return (
@@ -30,34 +32,40 @@ const Informative = () => {
         <div className="section-content">
           {infographic.map((item, id) =>
             <div key={id} className="content">
-              {/* <CountUp
+              <CountUp
                 start={0}
                 end={item.num}
                 enableScrollSpy={true}
                 ref={countUpRef}
               >
                 {({ countUpRef }) => <span className='num' ref={countUpRef}>{item.num} </span>}
-              </CountUp> */}
+              </CountUp>
               <h2>{item.content}</h2>
             </div>
           )}
         </div>
       </div>
-      <div className="testimonial">
+      <div {...handlers} className="testimonial">
         <SectionHead sectionHeading={'Testimonial'} />
-        <div className="section-content">
-          <div className="client-details">
-            <img src="https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg" alt="" />
-            <div className="details">
-              <h2>Michel John</h2>
-              <p>Architect</p>
-            </div>
-          </div>
-          <div className="client-feedback">
-            <p>“Great theme, just what we were looking for. Easy to install, easy to navigate. Well documented. Really enjoyed the support. which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of me.”</p>
-            <div className="counter">1 / 5</div>
-          </div>
-        </div>
+        {testimonialData.map((elem, id) => {
+          return (
+            feedbackIndex === (id + 1) && (
+              <div key={id} className="section-content">
+                <div className="client-details">
+                  <img src={elem.img} alt="" />
+                  <div className="details">
+                    <h2>{elem.clientName}</h2>
+                    <p>{elem.role}</p>
+                  </div>
+                </div>
+                <div className="client-feedback">
+                  <p>{elem.feedback}</p>
+                  <div className="counter">{feedbackIndex} / {testimonialData.length}</div>
+                </div>
+              </div>
+            )
+          )
+        })}
       </div>
     </div>
   )

@@ -60,6 +60,10 @@ a {
   padding: 9.6rem 1.5rem;
 }
 
+:is(#about-section, .whyus-section, #service-section, .project-section) .container {
+  padding-top: 5rem;
+}
+
 .active {
   color: #48C989;
 }

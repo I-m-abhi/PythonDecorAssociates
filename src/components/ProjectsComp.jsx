@@ -1,6 +1,8 @@
+import { Link, useLocation } from "react-router";
 import SectionHead from "./SectionHead";
 
 const ProjectsComp = ({ sectionHeading, details }) => {
+  const location = useLocation();
   return (
     <section className='project-section'>
       <div className="container">
@@ -16,7 +18,7 @@ const ProjectsComp = ({ sectionHeading, details }) => {
                 {elem.imageOf ? <h3>{elem.imageOf}</h3> : ''}
                 {elem.location ? <h4>{elem.location}</h4> : ''}
                 <p>{elem.moreDetails}</p>
-                <button>View more</button>
+                {location.pathname === "/" && <button><Link to="/projects">View More</Link></button>}
               </div>
             </div>
           )}

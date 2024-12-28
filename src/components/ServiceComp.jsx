@@ -1,6 +1,9 @@
+import { Link, useLocation } from "react-router";
 import SectionHead from "./SectionHead";
 
 const ServiceComp = ({sectionHeading, details}) => {
+  const location = useLocation();
+  
   return (
     <section id='service-section'>
       <div className="container">
@@ -16,7 +19,7 @@ const ServiceComp = ({sectionHeading, details}) => {
               <div className="content-text">
                 {elem.location ? <h4>{elem.location}</h4> : ''}
                 <p>{elem.moreDetails}</p>
-              <button>View more</button>
+                {location.pathname === "/" && <button><Link to="/services">View More</Link></button>}
               </div>
             </div>
           )}
