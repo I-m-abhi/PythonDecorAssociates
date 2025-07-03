@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 8.4rem 2.5rem;
+}
+
+:root {
+  --charcol-black: #2D2D2D;
+  --brown-gold: #A97A50;
+  --off-white: #f7f5f3;
+  --deep-gray: #444444;
+  --muted-bronze: #7A5E3C;
+  --bg-color: #f0f0f0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+label,
+input,
+textarea {
+  line-height: 1.7;
+  word-spacing: .1rem;
+  letter-spacing: 0.1rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+li {
+  list-style: none;
+  font-size: 1.7rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--charcol-black);
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: .7rem 2.4rem;
+  letter-spacing: .1rem;
+  background-color: var(--brown-gold);
+  color: white;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--muted-bronze);
+  }
+}
+
+.icon {
+  color: var(--brown-gold);
+  font-size: 1.5rem;
+}
+
+.page-header {
+  position: relative;
+  object-fit: cover;
+  height: 35rem;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 35rem;
+  }
+
+  & .container {
+    position: relative;
+    color: var(--off-white);
+
+    & .heading {
+      font-size: 4rem;
+      font-weight: 800;
+    }
+
+    & ul {
+      margin-top: 4rem;
+      display: flex;
+      gap: 1.4rem;
+
+      & li,
+      a {
+        font-size: 1.3rem;
+        color: var(--off-white);
+      }
+    }
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  z-index: 9999;
+
+  & .popup-content {
+    background-color: var(--off-white);
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 50rem;
+    position: relative;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
+    max-height: 90vh;
+
+    & h2 {
+      margin-bottom: 2rem;
+      color: var(--brown-gold);
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+
+      & input,
+      & textarea,
+      & select {
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1px solid #ccc;
+        font-size: 1.4rem;
+        font-family: inherit;
+      }
+
+      & input[type="file"] {
+        background-color: #fff;
+      }
+
+      & .btn {
+        width: fit-content;
+        align-self: flex-end;
+      }
+    }
+
+    & .popup-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2.4rem;
+      cursor: pointer;
+      color: var(--brown-gold);
+    }
+
+    .success-message {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--brown-gold);
+      font-size: 1.6rem;
+
+      .icon {
+        font-size: 4rem;
+        color: green;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    .phone-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: .5rem;
+      overflow: hidden;
+
+      .flag {
+        background-color: #eee;
+        padding: 0.9rem 1.2rem;
+        font-size: 1.4rem;
+        border-right: 1px solid #ccc;
+      }
+
+      input {
+        flex: 1;
+        border: none;
+        padding: 1rem;
+        font-size: 1.4rem;
+        outline: none;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,150 @@
+@media (max-width: 1350px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 1250px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 53.25%;
+  }
+
+  .container {
+    max-width: 125rem;
+  }
+}
+
+@media (max-width: 1125px) {
+  .container {
+    max-width: 115rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .why-us {
+    & .container {
+      grid-template-columns: repeat(2, 1fr);
+
+      & .item:nth-of-type(3),
+      .item:nth-of-type(4) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 6.4rem 2.4rem;
+  }
+
+  .topbar-section {
+    & .container {
+      & .topbar-hide {
+        display: none;
+      }
+    }
+  }
+
+  .hero-section {
+    & .slide {
+      & .content {
+        & .heading {
+          width: 80%;
+        }
+
+        & .des {
+          width: 100%;
+        }
+      }
+    }
+
+
+    & .nav-btn {
+      position: absolute;
+      bottom: 8rem;
+      width: 3.5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      color: var(--charcol-black);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+
+      &:hover {
+        background-color: var(--brown-gold);
+        color: white;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2px);
+      }
+    }
+
+    & .prev {
+      left: 15rem;
+    }
+
+    & .next {
+      right: 15rem;
+    }
+
+
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar-section {
+    & .container {
+      flex-direction: column;
+    }
+  }
+
+  .why-us {
+    & .container {
+      grid-template-columns: 1fr;
+
+      & .item:nth-of-type(2) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-section .container {
+    .menu-icon {
+      display: block;
+    }
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 998;
+
+    &.open {
+      right: 0;
+    }
+
+    ul {
+      flex-direction: column;
+      gap: 4rem;
+      font-size: 2rem;
+    }
+  }
+}
