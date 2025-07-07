@@ -1,9 +1,9 @@
-import serviceImg1 from '../assets/services/interior_design_consultation.png';
-import serviceImg2 from '../assets/services/space_planning_concept_development.png';
-import serviceImg3 from '../assets/services/custom_design_solutions.png';
-import serviceImg4 from '../assets/services/architectural_design_remodeling.png';
-import serviceImg5 from '../assets/services/turnkey_project_management.png';
-import serviceImg6 from '../assets/services/renovation_remodeling_services.png';
+import serviceImg1 from '../assets/services/interior_design_consultation.webp';
+import serviceImg2 from '../assets/services/space_planning_concept_development.webp';
+import serviceImg3 from '../assets/services/custom_design_solutions.webp';
+import serviceImg4 from '../assets/services/architectural_design_remodeling.webp';
+import serviceImg5 from '../assets/services/turnkey_project_management.webp';
+import serviceImg6 from '../assets/services/renovation_remodeling_services.webp';
 
 export const serviceDetails = [
   {
@@ -212,9 +212,9 @@ export const projectDetails = [
 
 
 // BlogsData
-import blogImg1 from '../assets/Blogs/interior_trends_delhi_ncr_2025.png';
-import blogImg2 from '../assets/Blogs/colour_texture_trends_ncr.png';
-import blogImg3 from '../assets/Blogs/modular_kitchen_noida_remodeling.png';
+import blogImg1 from '../assets/Blogs/interior_trends_delhi_ncr_2025.webp';
+import blogImg2 from '../assets/Blogs/colour_texture_trends_ncr.webp';
+import blogImg3 from '../assets/Blogs/modular_kitchen_noida_remodeling.webp';
 
 export const blogDetails = [
   {

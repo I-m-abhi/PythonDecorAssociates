@@ -1,8 +1,8 @@
 import { Link } from 'react-router';
 import logo from '../assets/logo.png';
-import blog1 from "../assets/Blogs/interior_trends_delhi_ncr_2025.png";
-import blog2 from "../assets/Blogs/colour_texture_trends_ncr.png";
-import blog3 from "../assets/Blogs/modular_kitchen_noida_remodeling.png";
+import blog1 from "../assets/Blogs/interior_trends_delhi_ncr_2025.webp";
+import blog2 from "../assets/Blogs/colour_texture_trends_ncr.webp";
+import blog3 from "../assets/Blogs/modular_kitchen_noida_remodeling.webp";
 import project1 from "../assets/projects/Screenshot (37).png";
 import project2 from "../assets/projects/Screenshot (38).png"
 import project3 from "../assets/projects/Screenshot (39).png"

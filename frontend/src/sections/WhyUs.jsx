@@ -1,7 +1,7 @@
-import icon1 from "../assets/icons/chair.png";
-import icon2 from "../assets/icons/log.png";
-import icon3 from "../assets/icons/decor.png";
-import icon4 from "../assets/icons/offer.png";
+import icon1 from "../assets/icons/chair.webp";
+import icon2 from "../assets/icons/log.webp";
+import icon3 from "../assets/icons/decor.webp";
+import icon4 from "../assets/icons/offer.webp";
 
 const WhyUs = () => {
   return (

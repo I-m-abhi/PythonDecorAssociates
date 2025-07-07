@@ -3,6 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { FaCheckCircle } from "react-icons/fa";
 
 const QuotePopup = ({ isOpen, onClose }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -36,24 +37,51 @@ const QuotePopup = ({ isOpen, onClose }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
 
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      propertyType: "",
-      message: "",
-      files: [],
-    });
+    // Collect file names
+    const uploadedFileNames = formData.files.map(file => file.name).join(", ");
 
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 2500);
+    const formBody = new URLSearchParams();
+    formBody.append("fullName", formData.fullName);
+    formBody.append("email", formData.email);
+    formBody.append("phone", formData.phone);
+    formBody.append("propertyType", formData.propertyType);
+    formBody.append("message", formData.message);
+    formBody.append("files", uploadedFileNames);  // ⬅️ Append file names
+    formBody.append("timestamp", new Date().toLocaleString());
+
+    try {
+      const response = await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formBody.toString(),
+      });
+
+      const result = await response.text();
+
+      setSubmitted(true);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        propertyType: "",
+        message: "",
+        files: [],
+      });
+
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 2500);
+    } catch (error) {
+      console.error("Form submit error:", error);
+    }
   };
+
 
   if (!isOpen) return null;
 
